@@ -1,17 +1,12 @@
-#import "Cause.h"
+#import "CauseResponse.h"
 #import "Customer.h"
 
 
-@implementation Cause
+@implementation CauseResponse
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"identifier":@"id",
-             @"created_at":@"created_at",
-             @"updated_at":@"updated_at",
-             @"desc":@"description",
-             @"question":@"question",
-             @"answer":@"answer",
+             @"cause":@"cause",
              @"customer":@"customer"
              };
 }
@@ -21,4 +16,8 @@
     return [MTLJSONAdapter dictionaryTransformerWithModelClass: [Customer class]];
 }
 
++ (NSValueTransformer *)causeJSONTransformer {
+    
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass: [Cause class]];
+}
 @end

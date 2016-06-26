@@ -14,4 +14,7 @@
 #define SIGNIN @"/auth/sign_in"
 #define SIGNUP @"/auth/sign_up"
 
+#define CREATE_CAUSE @"/cause/create"
+#define LIST_CAUSES_BY_DATE @"/cause/list_by_dates"
+
 #endif /* Endpoints_h */
