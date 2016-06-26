@@ -3,7 +3,7 @@
 
 @interface ListCausesRequestModel : MTLModel <MTLJSONSerializing>
 
-@property(strong, nonatomic) NSString *startDate;
-@property(strong, nonatomic) NSString *finalDate;
+@property(strong, nonatomic) NSDate *startDate;
+@property(strong, nonatomic) NSDate *finalDate;
 
 @end
