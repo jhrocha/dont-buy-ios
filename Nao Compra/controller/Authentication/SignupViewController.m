@@ -65,7 +65,10 @@
                 [defaults setObject:signup.token forKey:@"token"];
                 [defaults synchronize];
                 
-                //Segue to other view
+                UIStoryboard *storyboard= [UIStoryboard storyboardWithName:@"Main_Storyboard" bundle:nil];
+                UITabBarController *controller= [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+                
+                [self presentViewController:controller animated:YES completion:nil];
                 
             }else{
                 
