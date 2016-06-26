@@ -25,6 +25,8 @@
 		9F6151071D1F7D6A00FF9ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6151051D1F7D6A00FF9ED6 /* Main.storyboard */; };
 		9F6151091D1F7D6A00FF9ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6151081D1F7D6A00FF9ED6 /* Assets.xcassets */; };
 		9F61510C1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F61510A1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard */; };
+		9FC543731D2026560076CAAC /* Storyboard_Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC543721D2026560076CAAC /* Storyboard_Authentication.storyboard */; };
+		9FC543781D2033050076CAAC /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC543771D2033050076CAAC /* AuthenticationViewController.m */; };
 		C6AE45A3AD839C14104A090B /* Pods_Nao_Compra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7D9186573A77AEFBE183DE /* Pods_Nao_Compra.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,9 @@
 		9F6151081D1F7D6A00FF9ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F61510B1D1F7D6A00FF9ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F61510D1D1F7D6A00FF9ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC543721D2026560076CAAC /* Storyboard_Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Authentication.storyboard; path = view/Authentication/Storyboard_Authentication.storyboard; sourceTree = "<group>"; };
+		9FC543761D2033050076CAAC /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationViewController.h; path = controller/Authentication/AuthenticationViewController.h; sourceTree = "<group>"; };
+		9FC543771D2033050076CAAC /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationViewController.m; path = controller/Authentication/AuthenticationViewController.m; sourceTree = "<group>"; };
 		DE1829728FFEE10A29A42BB0 /* Pods-Nao Compra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nao Compra.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nao Compra/Pods-Nao Compra.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,16 +210,13 @@
 		9F6150F81D1F7D6A00FF9ED6 /* Nao Compra */ = {
 			isa = PBXGroup;
 			children = (
+				9FC543711D2025B50076CAAC /* model */,
+				9FC543701D2025A90076CAAC /* controller */,
+				9FC5436F1D20259D0076CAAC /* view */,
 				9F283F121D1F811900C0708D /* view-controller */,
 				9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */,
 				9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */,
-				9F6150FF1D1F7D6A00FF9ED6 /* FirstViewController.h */,
-				9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */,
-				9F6151021D1F7D6A00FF9ED6 /* SecondViewController.h */,
-				9F6151031D1F7D6A00FF9ED6 /* SecondViewController.m */,
-				9F6151051D1F7D6A00FF9ED6 /* Main.storyboard */,
 				9F6151081D1F7D6A00FF9ED6 /* Assets.xcassets */,
-				9F61510A1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard */,
 				9F61510D1D1F7D6A00FF9ED6 /* Info.plist */,
 				9F6150F91D1F7D6A00FF9ED6 /* Supporting Files */,
 			);
@@ -227,6 +229,52 @@
 				9F6150FA1D1F7D6A00FF9ED6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FC5436F1D20259D0076CAAC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9FC543741D2026750076CAAC /* Authentication */,
+				9F6151051D1F7D6A00FF9ED6 /* Main.storyboard */,
+				9F61510A1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		9FC543701D2025A90076CAAC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FC543751D2032C80076CAAC /* Authentication */,
+				9F6150FF1D1F7D6A00FF9ED6 /* FirstViewController.h */,
+				9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */,
+				9F6151021D1F7D6A00FF9ED6 /* SecondViewController.h */,
+				9F6151031D1F7D6A00FF9ED6 /* SecondViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9FC543711D2025B50076CAAC /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		9FC543741D2026750076CAAC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9FC543721D2026560076CAAC /* Storyboard_Authentication.storyboard */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		9FC543751D2032C80076CAAC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9FC543761D2033050076CAAC /* AuthenticationViewController.h */,
+				9FC543771D2033050076CAAC /* AuthenticationViewController.m */,
+			);
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 		A99EB4E35926EBD0007874D1 /* Pods */ = {
@@ -309,6 +357,7 @@
 				9F61510C1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard in Resources */,
 				9F6151091D1F7D6A00FF9ED6 /* Assets.xcassets in Resources */,
 				9F6151071D1F7D6A00FF9ED6 /* Main.storyboard in Resources */,
+				9FC543731D2026560076CAAC /* Storyboard_Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +424,7 @@
 				9F283F401D1F8FED00C0708D /* AuthenticationRequest.m in Sources */,
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
 				9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */,
+				9FC543781D2033050076CAAC /* AuthenticationViewController.m in Sources */,
 				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
 				9F283F471D1FA44C00C0708D /* CauseResponse.m in Sources */,
 				9F283F281D1F866800C0708D /* Signin.m in Sources */,
