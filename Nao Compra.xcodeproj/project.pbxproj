@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9F283F171D1F811900C0708D /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F161D1F811900C0708D /* BaseRequest.m */; };
+		9F283F281D1F866800C0708D /* Signin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F251D1F866800C0708D /* Signin.m */; };
+		9F283F291D1F866800C0708D /* Signup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F271D1F866800C0708D /* Signup.m */; };
+		9F283F2C1D1F86B300C0708D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F2B1D1F86B300C0708D /* User.m */; };
+		9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F2E1D1F879000C0708D /* SignupResponse.m */; };
 		9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FA1D1F7D6A00FF9ED6 /* main.m */; };
 		9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */; };
 		9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */; };
@@ -24,6 +28,14 @@
 		9F283F151D1F811900C0708D /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
 		9F283F161D1F811900C0708D /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		9F283F191D1F817900C0708D /* Endpoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Endpoints.h; path = Endpoints/Endpoints.h; sourceTree = "<group>"; };
+		9F283F241D1F866800C0708D /* Signin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signin.h; sourceTree = "<group>"; };
+		9F283F251D1F866800C0708D /* Signin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signin.m; sourceTree = "<group>"; };
+		9F283F261D1F866800C0708D /* Signup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signup.h; sourceTree = "<group>"; };
+		9F283F271D1F866800C0708D /* Signup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signup.m; sourceTree = "<group>"; };
+		9F283F2A1D1F86B300C0708D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9F283F2B1D1F86B300C0708D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		9F283F2D1D1F879000C0708D /* SignupResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupResponse.h; sourceTree = "<group>"; };
+		9F283F2E1D1F879000C0708D /* SignupResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupResponse.m; sourceTree = "<group>"; };
 		9F6150F61D1F7D6A00FF9ED6 /* Nao Compra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nao Compra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6150FA1D1F7D6A00FF9ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +74,7 @@
 		9F283F131D1F811900C0708D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				9F283F221D1F866800C0708D /* Models */,
 				9F283F181D1F815400C0708D /* Endpoints */,
 				9F283F141D1F811900C0708D /* Base request */,
 			);
@@ -83,6 +96,29 @@
 				9F283F191D1F817900C0708D /* Endpoints.h */,
 			);
 			name = Endpoints;
+			sourceTree = "<group>";
+		};
+		9F283F221D1F866800C0708D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F231D1F866800C0708D /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F283F231D1F866800C0708D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F2D1D1F879000C0708D /* SignupResponse.h */,
+				9F283F2E1D1F879000C0708D /* SignupResponse.m */,
+				9F283F2A1D1F86B300C0708D /* User.h */,
+				9F283F2B1D1F86B300C0708D /* User.m */,
+				9F283F241D1F866800C0708D /* Signin.h */,
+				9F283F251D1F866800C0708D /* Signin.m */,
+				9F283F261D1F866800C0708D /* Signup.h */,
+				9F283F271D1F866800C0708D /* Signup.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		9F6150ED1D1F7D6900FF9ED6 = {
@@ -268,11 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F283F2C1D1F86B300C0708D /* User.m in Sources */,
 				9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */,
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
 				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
+				9F283F281D1F866800C0708D /* Signin.m in Sources */,
+				9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */,
 				9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */,
 				9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */,
+				9F283F291D1F866800C0708D /* Signup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
