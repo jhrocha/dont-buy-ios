@@ -6,7 +6,7 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"description":@"description",
+             @"description":@"desc",
              @"question":@"question",
              @"answer":@"answer",
              @"customer":@"customer"
