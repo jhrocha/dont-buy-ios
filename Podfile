@@ -4,4 +4,5 @@ use_frameworks!
 target 'Nao Compra' do
  pod 'AFNetworking', '~> 3.0'
  pod 'Mantle'
+ pod 'JTProgressHUD'
 end
