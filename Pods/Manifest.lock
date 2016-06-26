@@ -14,18 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - JTProgressHUD (1.0.3)
   - Mantle (2.0.6):
     - Mantle/extobjc (= 2.0.6)
   - Mantle/extobjc (2.0.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - JTProgressHUD
   - Mantle
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  JTProgressHUD: d2519c41e664acb554932aac12f5a94b47d88a69
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
 
-PODFILE CHECKSUM: 7f5303eb48e04024b3b093728a5ab74cb5604139
+PODFILE CHECKSUM: f367b1d2bc0ae6267b1088366b105a624335da93
 
 COCOAPODS: 1.0.1
