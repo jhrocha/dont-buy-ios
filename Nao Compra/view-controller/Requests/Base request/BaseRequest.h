@@ -1,11 +1,3 @@
-//
-//  BaseRequest.h
-//  unimed api
-//
-//  Created by Jorginho on 1/19/15.
-//  Copyright (c) 2015 JHRocha. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "Mantle.h"
