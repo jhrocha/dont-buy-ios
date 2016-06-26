@@ -7,6 +7,7 @@
 //
 
 #import "AuthenticationViewController.h"
+#import <JTProgressHUD/JTProgressHUD.h>
 
 @interface AuthenticationViewController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.request= [AuthenticationRequest new];
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +36,57 @@
 }
 */
 
+- (IBAction)login:(id)sender {
+    
+    if ([self.emailTextfield.text isEqualToString:@""] || [self.passwordTextfield.text isEqualToString:@""]) {
+        
+        UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Não é possível continuar :(" message:@"Preencha todos os campos para continuar" preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Tentar novamente" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alert addAction:okButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+    
+        Signin *signin= [Signin new];
+        signin.email= self.emailTextfield.text.lowercaseString;
+        signin.password= self.passwordTextfield.text.lowercaseString;
+        
+        [JTProgressHUD show];
+        [self.request SigninUser:signin withBlock:^(BOOL success, NSString *token, NSError *error) {
+            
+            if (success) {
+                NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+                [defaults setObject:token forKey:@"token"];
+                [defaults synchronize];
+                
+                //Segue to other view
+            
+            }else{
+                
+                UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Parece que há algo errado :(" message:@"Verifique se seu email e senha estão corretos" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Tentar novamente" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    [alert dismissViewControllerAnimated:YES completion:nil];
+                }];
+                
+                [alert addAction:okButton];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+                
+            }
+            
+            [JTProgressHUD hide];
+        }];
+        
+    }
+    
+}
+
+- (IBAction)signup:(id)sender {
+}
 @end
