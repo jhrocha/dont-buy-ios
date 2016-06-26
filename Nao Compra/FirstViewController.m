@@ -7,9 +7,6 @@
 //
 
 #import "FirstViewController.h"
-#import "AuthenticationRequest.h"
-#import "Signup.h"
-#import "SignupResponse.h"
 
 @interface FirstViewController ()
 
