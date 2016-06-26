@@ -4,8 +4,8 @@
 
 @interface SignupResponse : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, retain) User *User;
-@property (nonatomic, retain) NSString *token;
-@property (nonatomic, retain) NSString *role;
+@property (strong, nonatomic) User *User;
+@property (strong, nonatomic) NSString *token;
+@property (strong, nonatomic) NSString *role;
 
 @end

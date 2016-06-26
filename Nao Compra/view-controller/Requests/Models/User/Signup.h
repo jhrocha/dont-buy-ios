@@ -3,11 +3,9 @@
 
 @interface Signup : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, retain) NSString *cpf;
-@property (nonatomic, retain) NSString *password;
-@property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSString *role;
-
-- (void) parseJSONDictionary:(NSDictionary *)dic;
+@property (strong, nonatomic) NSString *cpf;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *role;
 
 @end

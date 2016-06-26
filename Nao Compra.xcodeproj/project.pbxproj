@@ -12,6 +12,9 @@
 		9F283F291D1F866800C0708D /* Signup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F271D1F866800C0708D /* Signup.m */; };
 		9F283F2C1D1F86B300C0708D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F2B1D1F86B300C0708D /* User.m */; };
 		9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F2E1D1F879000C0708D /* SignupResponse.m */; };
+		9F283F361D1F8A2600C0708D /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F321D1F8A2600C0708D /* Cause.m */; };
+		9F283F371D1F8A2600C0708D /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F351D1F8A2600C0708D /* Customer.m */; };
+		9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */; };
 		9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FA1D1F7D6A00FF9ED6 /* main.m */; };
 		9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */; };
 		9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */; };
@@ -36,6 +39,12 @@
 		9F283F2B1D1F86B300C0708D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9F283F2D1D1F879000C0708D /* SignupResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupResponse.h; sourceTree = "<group>"; };
 		9F283F2E1D1F879000C0708D /* SignupResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupResponse.m; sourceTree = "<group>"; };
+		9F283F311D1F8A2600C0708D /* Cause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cause.h; sourceTree = "<group>"; };
+		9F283F321D1F8A2600C0708D /* Cause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cause.m; sourceTree = "<group>"; };
+		9F283F341D1F8A2600C0708D /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		9F283F351D1F8A2600C0708D /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		9F283F3A1D1F8C7700C0708D /* ListCausesRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCausesRequestModel.h; sourceTree = "<group>"; };
+		9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCausesRequestModel.m; sourceTree = "<group>"; };
 		9F6150F61D1F7D6A00FF9ED6 /* Nao Compra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nao Compra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6150FA1D1F7D6A00FF9ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +110,8 @@
 		9F283F221D1F866800C0708D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F283F301D1F8A2600C0708D /* Causes */,
+				9F283F331D1F8A2600C0708D /* Customer */,
 				9F283F231D1F866800C0708D /* User */,
 			);
 			path = Models;
@@ -119,6 +130,26 @@
 				9F283F271D1F866800C0708D /* Signup.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9F283F301D1F8A2600C0708D /* Causes */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F311D1F8A2600C0708D /* Cause.h */,
+				9F283F321D1F8A2600C0708D /* Cause.m */,
+				9F283F3A1D1F8C7700C0708D /* ListCausesRequestModel.h */,
+				9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */,
+			);
+			path = Causes;
+			sourceTree = "<group>";
+		};
+		9F283F331D1F8A2600C0708D /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F341D1F8A2600C0708D /* Customer.h */,
+				9F283F351D1F8A2600C0708D /* Customer.m */,
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 		9F6150ED1D1F7D6900FF9ED6 = {
@@ -304,9 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F283F371D1F8A2600C0708D /* Customer.m in Sources */,
 				9F283F2C1D1F86B300C0708D /* User.m in Sources */,
+				9F283F361D1F8A2600C0708D /* Cause.m in Sources */,
 				9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */,
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
+				9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */,
 				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
 				9F283F281D1F866800C0708D /* Signin.m in Sources */,
 				9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */,
