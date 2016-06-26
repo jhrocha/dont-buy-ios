@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F283F171D1F811900C0708D /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F161D1F811900C0708D /* BaseRequest.m */; };
 		9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FA1D1F7D6A00FF9ED6 /* main.m */; };
 		9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */; };
 		9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */; };
@@ -20,6 +21,9 @@
 /* Begin PBXFileReference section */
 		42FB4BBC5E80AAABAA41A3DE /* Pods-Nao Compra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nao Compra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nao Compra/Pods-Nao Compra.debug.xcconfig"; sourceTree = "<group>"; };
 		4F7D9186573A77AEFBE183DE /* Pods_Nao_Compra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nao_Compra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F283F151D1F811900C0708D /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		9F283F161D1F811900C0708D /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		9F283F191D1F817900C0708D /* Endpoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Endpoints.h; path = Endpoints/Endpoints.h; sourceTree = "<group>"; };
 		9F6150F61D1F7D6A00FF9ED6 /* Nao Compra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nao Compra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6150FA1D1F7D6A00FF9ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +51,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F283F121D1F811900C0708D /* view-controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F131D1F811900C0708D /* Requests */,
+			);
+			path = "view-controller";
+			sourceTree = "<group>";
+		};
+		9F283F131D1F811900C0708D /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F181D1F815400C0708D /* Endpoints */,
+				9F283F141D1F811900C0708D /* Base request */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		9F283F141D1F811900C0708D /* Base request */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F151D1F811900C0708D /* BaseRequest.h */,
+				9F283F161D1F811900C0708D /* BaseRequest.m */,
+			);
+			path = "Base request";
+			sourceTree = "<group>";
+		};
+		9F283F181D1F815400C0708D /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F191D1F817900C0708D /* Endpoints.h */,
+			);
+			name = Endpoints;
+			sourceTree = "<group>";
+		};
 		9F6150ED1D1F7D6900FF9ED6 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +106,7 @@
 		9F6150F81D1F7D6A00FF9ED6 /* Nao Compra */ = {
 			isa = PBXGroup;
 			children = (
+				9F283F121D1F811900C0708D /* view-controller */,
 				9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */,
 				9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */,
 				9F6150FF1D1F7D6A00FF9ED6 /* FirstViewController.h */,
@@ -231,6 +270,7 @@
 			files = (
 				9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */,
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
+				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
 				9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */,
 				9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */,
 			);
