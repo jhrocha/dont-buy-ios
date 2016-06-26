@@ -8,6 +8,13 @@
         self.manager = [AFHTTPSessionManager manager];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        NSUserDefaults *userDefaults= [NSUserDefaults standardUserDefaults];
+        NSString *token= [userDefaults objectForKey:@"token"];
+        
+        if (token) {
+            [self.manager.requestSerializer setValue:token forHTTPHeaderField:@"Token"];
+        }
     }
     return self;
 }
