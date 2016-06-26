@@ -6,9 +6,9 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-      @"user":@"user",
-      @"token":@"token",
-      @"role":@"role"
+             @"user":@"user",
+             @"token":@"token",
+             @"role":@"role"
       };
 }
 + (NSValueTransformer *)userJSONTransformer {
