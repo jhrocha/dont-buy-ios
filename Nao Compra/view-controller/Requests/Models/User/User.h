@@ -1,12 +1,13 @@
 #import <Foundation/Foundation.h>
 #import <Mantle/Mantle.h>
 
-@interface Signup : MTLModel <MTLJSONSerializing>
+@interface User : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, retain) NSNumber *identifier;
 @property (nonatomic, retain) NSString *cpf;
-@property (nonatomic, retain) NSString *password;
+@property (nonatomic, retain) NSString *created_at;
+@property (nonatomic, retain) NSString *updated_at;
 @property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSString *role;
 
 - (void) parseJSONDictionary:(NSDictionary *)dic;
 

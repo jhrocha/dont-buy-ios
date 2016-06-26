@@ -1,13 +1,26 @@
+//
+//  Created by Cocoa JSON Editor
+//  http://www.cocoajsoneditor.com
+//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//
+
+// Import
 #import "Signin.h"
 
 
 @implementation Signin
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey{
-    return @{
-             @"email":@"email",
-             @"password":@"password"
-             };
+
+@synthesize password;
+@synthesize email;
+
+
+- (void) dealloc
+{
+	[password release];
+	[email release];
+	
+	[super dealloc];
 
 }
 

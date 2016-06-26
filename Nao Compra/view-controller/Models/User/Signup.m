@@ -1,14 +1,41 @@
-#import "Signup.h"
+//
+//  Created by Cocoa JSON Editor
+//  http://www.cocoajsoneditor.com
+//  Copyright 2013 __MyCompanyName__. All rights reserved.
+//
 
-@implementation Signup
+// Import
+#import "user_signup.h"
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey{
-    return @{
-             @"email":@"email",
-             @"password":@"password",
-             @"cpf":@"cpf",
-             @"role":@"role"
-             };
+
+@implementation user_signup
+
+
+@synthesize cpf;
+@synthesize password;
+@synthesize email;
+@synthesize role;
+
+
+- (void) dealloc
+{
+	[cpf release];
+	[password release];
+	[email release];
+	[role release];
+	
+	[super dealloc];
+
+}
+
+- (id) initWithJSONDictionary:(NSDictionary *)dic
+{
+	if(self = [super init])
+	{
+		[self parseJSONDictionary:dic];
+	}
+	
+	return self;
 }
 
 - (void) parseJSONDictionary:(NSDictionary *)dic
