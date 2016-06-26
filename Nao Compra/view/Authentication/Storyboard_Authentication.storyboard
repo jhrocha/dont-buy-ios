@@ -155,10 +155,10 @@ Insira suas informações e acesse agora</string>
             </objects>
             <point key="canvasLocation" x="709" y="289"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="1YE-EJ-2hh">
             <objects>
-                <viewController storyboardIdentifier="Signup" id="m1v-pr-Rag" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signup" id="m1v-pr-Rag" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIN-Qe-zvM"/>
                         <viewControllerLayoutGuide type="bottom" id="IIU-Ps-iph"/>
@@ -216,6 +216,9 @@ Insira suas informações e acesse agora</string>
                                     <constraint firstAttribute="height" constant="44" id="euU-cM-UwE"/>
                                 </constraints>
                                 <state key="normal" title="Acessar agora"/>
+                                <connections>
+                                    <action selector="signup:" destination="m1v-pr-Rag" eventType="touchUpInside" id="ur2-Q3-swf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79P-Td-bkr">
                                 <rect key="frame" x="21" y="278" width="58" height="19"/>
@@ -233,7 +236,7 @@ Insira suas informações e acesse agora</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIP-yd-TZE">
                                 <rect key="frame" x="86" y="237" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aK-ov-OgJ">
                                 <rect key="frame" x="20" y="240" width="58" height="30"/>
@@ -290,6 +293,17 @@ Insira suas informações e acesse agora</string>
                     </view>
                     <navigationItem key="navigationItem" id="Qvu-Rb-Xpx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cpfLabel" destination="6aK-ov-OgJ" id="4qw-jP-3wP"/>
+                        <outlet property="cpfTextField" destination="cIP-yd-TZE" id="IzJ-C8-3Ot"/>
+                        <outlet property="emailLabel" destination="F5H-Ru-BkG" id="YXS-sF-v03"/>
+                        <outlet property="emailTextField" destination="dAS-sw-OUy" id="VbS-Aw-ML3"/>
+                        <outlet property="logoImage" destination="NcK-Wq-j3f" id="VgK-89-r7g"/>
+                        <outlet property="passwordLabel" destination="79P-Td-bkr" id="VKW-MZ-TuC"/>
+                        <outlet property="passwordTextField" destination="XZt-7Z-7KL" id="PU8-2b-ezl"/>
+                        <outlet property="signupButton" destination="Ymh-XT-wn9" id="ga0-Ah-ugL"/>
+                        <outlet property="userMessageLabel" destination="nTE-cz-Dnn" id="qkO-lF-NcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3P-nw-Gw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

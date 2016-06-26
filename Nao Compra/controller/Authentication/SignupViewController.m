@@ -1,19 +1,18 @@
 //
-//  AuthenticationViewController.m
+//  SignupViewController.m
 //  Nao Compra
 //
 //  Created by Jorge Henrique Rocha on 26/06/16.
 //  Copyright © 2016 Jorge Henrique Rocha. All rights reserved.
 //
 
-#import "AuthenticationViewController.h"
-#import <JTProgressHUD/JTProgressHUD.h>
+#import "SignupViewController.h"
 
-@interface AuthenticationViewController ()
+@interface SignupViewController ()
 
 @end
 
-@implementation AuthenticationViewController
+@implementation SignupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,12 +35,12 @@
 }
 */
 
-- (IBAction)login:(id)sender {
+- (IBAction)signup:(id)sender {
     
-    if ([self.emailTextfield.text isEqualToString:@""] || [self.passwordTextfield.text isEqualToString:@""]) {
+    if ([self.emailTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] || [self.cpfTextField.text isEqualToString:@""]) {
         
         UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Não é possível continuar :(" message:@"Preencha todos os campos para continuar" preferredStyle:UIAlertControllerStyleAlert];
-
+        
         UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Tentar novamente" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [alert dismissViewControllerAnimated:YES completion:nil];
         }];
@@ -51,27 +50,29 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }else{
-    
-        Signin *signin= [Signin new];
-        signin.email= self.emailTextfield.text.lowercaseString;
-        signin.password= self.passwordTextfield.text.lowercaseString;
+        
+        Signup *signup= [Signup new];
+        signup.email= self.emailTextField.text.lowercaseString;
+        signup.password= self.passwordTextField.text.lowercaseString;
+        signup.cpf= self.cpfTextField.text.lowercaseString;
+        signup.role= @"salesman";
         
         [JTProgressHUD show];
-        [self.request SigninUser:signin withBlock:^(BOOL success, NSString *token, NSError *error) {
+        [self.request CreateUser:signup withBlock:^(BOOL success, SignupResponse *signup, NSError *error) {
             
             if (success) {
                 NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
-                [defaults setObject:token forKey:@"token"];
+                [defaults setObject:signup.token forKey:@"token"];
                 [defaults synchronize];
                 
                 UIStoryboard *storyboard= [UIStoryboard storyboardWithName:@"Main_Storyboard" bundle:nil];
                 UITabBarController *controller= [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
-
+                
                 [self presentViewController:controller animated:YES completion:nil];
-            
+                
             }else{
                 
-                UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Parece que há algo errado :(" message:@"Verifique se seu email e senha estão corretos" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Parece que há algo errado :(" message:@"Verifique se as informações digitadas estão corretas" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Tentar novamente" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     [alert dismissViewControllerAnimated:YES completion:nil];
@@ -84,12 +85,10 @@
             }
             
             [JTProgressHUD hide];
+            
         }];
         
     }
     
-}
-
-- (IBAction)signup:(id)sender {
 }
 @end
