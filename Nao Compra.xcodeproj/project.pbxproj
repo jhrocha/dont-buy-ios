@@ -16,6 +16,8 @@
 		9F283F371D1F8A2600C0708D /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F351D1F8A2600C0708D /* Customer.m */; };
 		9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */; };
 		9F283F401D1F8FED00C0708D /* AuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F3F1D1F8FED00C0708D /* AuthenticationRequest.m */; };
+		9F283F441D1F9C1F00C0708D /* CausesRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F431D1F9C1F00C0708D /* CausesRequests.m */; };
+		9F283F471D1FA44C00C0708D /* CauseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F461D1FA44C00C0708D /* CauseResponse.m */; };
 		9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FA1D1F7D6A00FF9ED6 /* main.m */; };
 		9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */; };
 		9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */; };
@@ -48,6 +50,10 @@
 		9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCausesRequestModel.m; sourceTree = "<group>"; };
 		9F283F3E1D1F8FED00C0708D /* AuthenticationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationRequest.h; path = Requests/Authentication/AuthenticationRequest.h; sourceTree = "<group>"; };
 		9F283F3F1D1F8FED00C0708D /* AuthenticationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationRequest.m; path = Requests/Authentication/AuthenticationRequest.m; sourceTree = "<group>"; };
+		9F283F421D1F9C1F00C0708D /* CausesRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CausesRequests.h; path = Requests/Causes/CausesRequests.h; sourceTree = "<group>"; };
+		9F283F431D1F9C1F00C0708D /* CausesRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CausesRequests.m; path = Requests/Causes/CausesRequests.m; sourceTree = "<group>"; };
+		9F283F451D1FA44C00C0708D /* CauseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CauseResponse.h; sourceTree = "<group>"; };
+		9F283F461D1FA44C00C0708D /* CauseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CauseResponse.m; sourceTree = "<group>"; };
 		9F6150F61D1F7D6A00FF9ED6 /* Nao Compra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nao Compra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6150FA1D1F7D6A00FF9ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 		9F283F131D1F811900C0708D /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				9F283F411D1F9BF900C0708D /* Causes */,
 				9F283F3D1D1F8F5C00C0708D /* Authentication */,
 				9F283F181D1F815400C0708D /* Endpoints */,
 				9F283F141D1F811900C0708D /* Base request */,
@@ -144,6 +151,8 @@
 				9F283F321D1F8A2600C0708D /* Cause.m */,
 				9F283F3A1D1F8C7700C0708D /* ListCausesRequestModel.h */,
 				9F283F3B1D1F8C7700C0708D /* ListCausesRequestModel.m */,
+				9F283F451D1FA44C00C0708D /* CauseResponse.h */,
+				9F283F461D1FA44C00C0708D /* CauseResponse.m */,
 			);
 			path = Causes;
 			sourceTree = "<group>";
@@ -164,6 +173,15 @@
 				9F283F3F1D1F8FED00C0708D /* AuthenticationRequest.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		9F283F411D1F9BF900C0708D /* Causes */ = {
+			isa = PBXGroup;
+			children = (
+				9F283F421D1F9C1F00C0708D /* CausesRequests.h */,
+				9F283F431D1F9C1F00C0708D /* CausesRequests.m */,
+			);
+			name = Causes;
 			sourceTree = "<group>";
 		};
 		9F6150ED1D1F7D6900FF9ED6 = {
@@ -350,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F283F371D1F8A2600C0708D /* Customer.m in Sources */,
+				9F283F441D1F9C1F00C0708D /* CausesRequests.m in Sources */,
 				9F283F2C1D1F86B300C0708D /* User.m in Sources */,
 				9F283F361D1F8A2600C0708D /* Cause.m in Sources */,
 				9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */,
@@ -357,6 +376,7 @@
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
 				9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */,
 				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
+				9F283F471D1FA44C00C0708D /* CauseResponse.m in Sources */,
 				9F283F281D1F866800C0708D /* Signin.m in Sources */,
 				9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */,
 				9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */,
