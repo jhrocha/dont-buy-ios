@@ -9,7 +9,7 @@
         <!--Motivos da não compra-->
         <scene sceneID="e1A-VU-Vlz">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="f1M-8e-d5b" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="f1M-8e-d5b" customClass="CausesViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="umH-3J-wec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                                     <state key="normal" title="Escolher genêro">
                                                         <color key="titleColor" red="0.92156862750000001" green="0.30842180139999997" blue="0.49696259729999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="chooseGender:" destination="f1M-8e-d5b" eventType="touchUpInside" id="RC4-gU-xhV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -76,6 +79,9 @@
                                                     <state key="normal" title="Escolher F. etária">
                                                         <color key="titleColor" red="0.92156862750000001" green="0.30842180139999997" blue="0.49696259729999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="chooseAgegroup:" destination="f1M-8e-d5b" eventType="touchUpInside" id="nfG-8e-Zuc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -114,6 +120,9 @@
                                                     <state key="normal" title="Escolher pergunta">
                                                         <color key="titleColor" red="0.92156862750000001" green="0.30842180139999997" blue="0.49696259729999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="chooseQuestion:" destination="f1M-8e-d5b" eventType="touchUpInside" id="Xp0-Pf-YaV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -148,6 +157,9 @@
                                                     <state key="normal" title="Digitar resposta">
                                                         <color key="titleColor" red="0.92156862750000001" green="0.30842180139999997" blue="0.49696259729999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="chooseAnswer:" destination="f1M-8e-d5b" eventType="touchUpInside" id="boW-3B-WjP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -179,6 +191,9 @@
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="sendData:" destination="f1M-8e-d5b" eventType="touchUpInside" id="hbC-kC-f7U"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
