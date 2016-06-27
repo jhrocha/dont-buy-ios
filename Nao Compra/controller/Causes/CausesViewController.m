@@ -16,8 +16,6 @@
     self.cause= [Cause new];
     self.request= [CausesRequests new];
     self.customer= [Customer new];
-    self.sendButton.layer.borderWidth= 0.4f;
-    self.sendButton.layer.borderColor= [UIColor blueColor].CGColor;
     
 }
 

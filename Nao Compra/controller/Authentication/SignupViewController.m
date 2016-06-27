@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.request= [AuthenticationRequest new];
+    self.signupButton.layer.borderColor= [UIColor colorWithRed:0.88 green:0.19 blue:0.43 alpha:1.0].CGColor;
+    self.signupButton.layer.borderWidth= 0.4f;
     // Do any additional setup after loading the view.
 }
 
