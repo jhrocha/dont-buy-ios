@@ -10,14 +10,11 @@
         <scene sceneID="e1A-VU-Vlz">
             <objects>
                 <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="f1M-8e-d5b" customClass="CausesViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="umH-3J-wec">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="umH-3J-wec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="Uih-Wo-eMt">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Informações do cliente" id="KjG-Oj-fIW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gender" rowHeight="53" id="eO2-Dv-1BS">
@@ -176,19 +173,19 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Enviar as informações sobre a vendas?" id="6gb-f1-YOf">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="send_data" rowHeight="53" id="pMp-7i-rOY">
-                                        <rect key="frame" x="0.0" y="340" width="320" height="53"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="send_data" rowHeight="65" id="pMp-7i-rOY">
+                                        <rect key="frame" x="0.0" y="340" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pMp-7i-rOY" id="tge-UT-TWT">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOs-7q-12i">
-                                                    <rect key="frame" x="14" y="12" width="293" height="30"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <rect key="frame" x="14" y="10" width="293" height="44.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                     <size key="titleShadowOffset" width="2.2250738585072014e-308" height="1"/>
                                                     <state key="normal" title="Enviar agora">
-                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
@@ -197,7 +194,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KOs-7q-12i" firstAttribute="top" secondItem="tge-UT-TWT" secondAttribute="topMargin" constant="4" id="OWC-Os-OgI"/>
+                                                <constraint firstItem="KOs-7q-12i" firstAttribute="top" secondItem="tge-UT-TWT" secondAttribute="topMargin" constant="2" id="OWC-Os-OgI"/>
                                                 <constraint firstItem="KOs-7q-12i" firstAttribute="centerX" secondItem="tge-UT-TWT" secondAttribute="centerX" id="ObI-mN-WIV"/>
                                                 <constraint firstItem="KOs-7q-12i" firstAttribute="leading" secondItem="tge-UT-TWT" secondAttribute="leadingMargin" constant="6" id="ncx-gu-TzG"/>
                                                 <constraint firstItem="KOs-7q-12i" firstAttribute="centerY" secondItem="tge-UT-TWT" secondAttribute="centerY" id="wE6-hZ-GK7"/>
@@ -222,6 +219,7 @@
                         <outlet property="answerButton" destination="Aqz-SY-G1q" id="Ri5-Kk-1Oh"/>
                         <outlet property="genderButton" destination="hoT-yO-4mt" id="qll-3A-Ik2"/>
                         <outlet property="questionButton" destination="Uwc-na-pVG" id="2cn-hM-o2J"/>
+                        <outlet property="sendButton" destination="KOs-7q-12i" id="fH2-8m-dC1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U46-gQ-hoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
