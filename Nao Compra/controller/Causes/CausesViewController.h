@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *ageGroupButton;
 @property (strong, nonatomic) IBOutlet UIButton *questionButton;
 @property (strong, nonatomic) IBOutlet UIButton *answerButton;
+@property (strong, nonatomic) IBOutlet UIButton *sendButton;
 
 - (IBAction)chooseGender:(id)sender;
 - (IBAction)chooseAgegroup:(id)sender;

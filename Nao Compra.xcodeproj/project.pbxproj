@@ -20,13 +20,13 @@
 		9F283F471D1FA44C00C0708D /* CauseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F283F461D1FA44C00C0708D /* CauseResponse.m */; };
 		9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FA1D1F7D6A00FF9ED6 /* main.m */; };
 		9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */; };
-		9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */; };
-		9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6151031D1F7D6A00FF9ED6 /* SecondViewController.m */; };
 		9F6151071D1F7D6A00FF9ED6 /* Main_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6151051D1F7D6A00FF9ED6 /* Main_Storyboard.storyboard */; };
 		9F6151091D1F7D6A00FF9ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6151081D1F7D6A00FF9ED6 /* Assets.xcassets */; };
 		9F61510C1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F61510A1D1F7D6A00FF9ED6 /* LaunchScreen.storyboard */; };
 		9F6A857D1D2060B50049CCA9 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A857C1D2060B50049CCA9 /* SignupViewController.m */; };
 		9F6A85811D20BEED0049CCA9 /* CausesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A85801D20BEED0049CCA9 /* CausesViewController.m */; };
+		9F6A85841D20D9110049CCA9 /* CauseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A85831D20D9110049CCA9 /* CauseTableViewCell.m */; };
+		9F6A85871D20D9D60049CCA9 /* ListCausesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A85861D20D9D60049CCA9 /* ListCausesTableViewController.m */; };
 		9FC543731D2026560076CAAC /* Storyboard_Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC543721D2026560076CAAC /* Storyboard_Authentication.storyboard */; };
 		9FC543781D2033050076CAAC /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC543771D2033050076CAAC /* AuthenticationViewController.m */; };
 		C6AE45A3AD839C14104A090B /* Pods_Nao_Compra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7D9186573A77AEFBE183DE /* Pods_Nao_Compra.framework */; };
@@ -62,10 +62,6 @@
 		9F6150FA1D1F7D6A00FF9ED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F6150FC1D1F7D6A00FF9ED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9F6150FD1D1F7D6A00FF9ED6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9F6150FF1D1F7D6A00FF9ED6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		9F6151021D1F7D6A00FF9ED6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		9F6151031D1F7D6A00FF9ED6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		9F6151061D1F7D6A00FF9ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_Storyboard.storyboard; sourceTree = "<group>"; };
 		9F6151081D1F7D6A00FF9ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F61510B1D1F7D6A00FF9ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +70,10 @@
 		9F6A857C1D2060B50049CCA9 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupViewController.m; path = controller/Authentication/SignupViewController.m; sourceTree = "<group>"; };
 		9F6A857F1D20BEED0049CCA9 /* CausesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CausesViewController.h; path = controller/Causes/CausesViewController.h; sourceTree = "<group>"; };
 		9F6A85801D20BEED0049CCA9 /* CausesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CausesViewController.m; path = controller/Causes/CausesViewController.m; sourceTree = "<group>"; };
+		9F6A85821D20D9110049CCA9 /* CauseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CauseTableViewCell.h; path = model/cause/CauseTableViewCell.h; sourceTree = "<group>"; };
+		9F6A85831D20D9110049CCA9 /* CauseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CauseTableViewCell.m; path = model/cause/CauseTableViewCell.m; sourceTree = "<group>"; };
+		9F6A85851D20D9D60049CCA9 /* ListCausesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListCausesTableViewController.h; path = controller/Causes/ListCausesTableViewController.h; sourceTree = "<group>"; };
+		9F6A85861D20D9D60049CCA9 /* ListCausesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListCausesTableViewController.m; path = controller/Causes/ListCausesTableViewController.m; sourceTree = "<group>"; };
 		9FC543721D2026560076CAAC /* Storyboard_Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Authentication.storyboard; path = view/Authentication/Storyboard_Authentication.storyboard; sourceTree = "<group>"; };
 		9FC543761D2033050076CAAC /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthenticationViewController.h; path = controller/Authentication/AuthenticationViewController.h; sourceTree = "<group>"; };
 		9FC543771D2033050076CAAC /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthenticationViewController.m; path = controller/Authentication/AuthenticationViewController.m; sourceTree = "<group>"; };
@@ -242,6 +242,8 @@
 			children = (
 				9F6A857F1D20BEED0049CCA9 /* CausesViewController.h */,
 				9F6A85801D20BEED0049CCA9 /* CausesViewController.m */,
+				9F6A85851D20D9D60049CCA9 /* ListCausesTableViewController.h */,
+				9F6A85861D20D9D60049CCA9 /* ListCausesTableViewController.m */,
 			);
 			name = Causes;
 			sourceTree = "<group>";
@@ -261,10 +263,6 @@
 			children = (
 				9F6A857E1D20BEC70049CCA9 /* Causes */,
 				9FC543751D2032C80076CAAC /* Authentication */,
-				9F6150FF1D1F7D6A00FF9ED6 /* FirstViewController.h */,
-				9F6151001D1F7D6A00FF9ED6 /* FirstViewController.m */,
-				9F6151021D1F7D6A00FF9ED6 /* SecondViewController.h */,
-				9F6151031D1F7D6A00FF9ED6 /* SecondViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -272,6 +270,8 @@
 		9FC543711D2025B50076CAAC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9F6A85821D20D9110049CCA9 /* CauseTableViewCell.h */,
+				9F6A85831D20D9110049CCA9 /* CauseTableViewCell.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -437,9 +437,9 @@
 				9F283F371D1F8A2600C0708D /* Customer.m in Sources */,
 				9F283F441D1F9C1F00C0708D /* CausesRequests.m in Sources */,
 				9F283F2C1D1F86B300C0708D /* User.m in Sources */,
+				9F6A85871D20D9D60049CCA9 /* ListCausesTableViewController.m in Sources */,
 				9F6A857D1D2060B50049CCA9 /* SignupViewController.m in Sources */,
 				9F283F361D1F8A2600C0708D /* Cause.m in Sources */,
-				9F6151041D1F7D6A00FF9ED6 /* SecondViewController.m in Sources */,
 				9F283F401D1F8FED00C0708D /* AuthenticationRequest.m in Sources */,
 				9F6150FE1D1F7D6A00FF9ED6 /* AppDelegate.m in Sources */,
 				9F283F3C1D1F8C7700C0708D /* ListCausesRequestModel.m in Sources */,
@@ -447,9 +447,9 @@
 				9FC543781D2033050076CAAC /* AuthenticationViewController.m in Sources */,
 				9F283F171D1F811900C0708D /* BaseRequest.m in Sources */,
 				9F283F471D1FA44C00C0708D /* CauseResponse.m in Sources */,
+				9F6A85841D20D9110049CCA9 /* CauseTableViewCell.m in Sources */,
 				9F283F281D1F866800C0708D /* Signin.m in Sources */,
 				9F283F2F1D1F879000C0708D /* SignupResponse.m in Sources */,
-				9F6151011D1F7D6A00FF9ED6 /* FirstViewController.m in Sources */,
 				9F6150FB1D1F7D6A00FF9ED6 /* main.m in Sources */,
 				9F283F291D1F866800C0708D /* Signup.m in Sources */,
 			);

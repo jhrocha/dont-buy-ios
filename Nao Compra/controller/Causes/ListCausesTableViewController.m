@@ -1,0 +1,118 @@
+//
+//  ListCausesTableViewController.m
+//  Nao Compra
+//
+//  Created by Jorge Henrique Rocha on 27/06/16.
+//  Copyright © 2016 Jorge Henrique Rocha. All rights reserved.
+//
+
+#import "ListCausesTableViewController.h"
+
+@interface ListCausesTableViewController ()
+
+@end
+
+@implementation ListCausesTableViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.request= [CausesRequests new];
+    self.causesList= [NSArray new];
+    self.tableView.dataSource= self;
+    self.tableView.delegate= self;
+    [self receiveCauses];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.causesList.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CauseResponse *response= self.causesList[indexPath.row];
+    
+    CauseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cause" forIndexPath:indexPath];
+    cell.question.text=response.cause.question;
+    cell.question.text=response.cause.answer;
+    Customer *customer= response.customer;
+    
+    if (customer.initial_age.intValue <18 && customer.final_age.intValue >= 18 ) {
+        
+        cell.ageGroupColor.backgroundColor= [UIColor lightGrayColor];
+        
+    }else if (customer.initial_age.intValue >=18 && customer.final_age.intValue <= 25 ){
+        
+        cell.ageGroupColor.backgroundColor= [UIColor greenColor];
+        
+    }else if (customer.initial_age.intValue >=25 && customer.final_age.intValue <= 35 ){
+        
+        cell.ageGroupColor.backgroundColor= [UIColor orangeColor];
+        
+    }else if (customer.initial_age.intValue >=35 && customer.final_age.intValue <= 45 ){
+        
+        cell.ageGroupColor.backgroundColor= [UIColor redColor];
+        
+    }else if (customer.initial_age.intValue >=45 && customer.final_age.intValue <= 60 ){
+        
+        cell.ageGroupColor.backgroundColor= [UIColor grayColor];
+    
+    }else if (customer.final_age.intValue >= 60 ){
+    
+        cell.ageGroupColor.backgroundColor= [UIColor blackColor];
+        
+    }
+    
+    cell.date.text= response.cause.created_at;
+    
+    return cell;
+}
+
+- (void) receiveCauses{
+    
+    ListCausesRequestModel *params= [ListCausesRequestModel new];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.dateFormat = @"dd/MM/yyyy";
+
+    params.startDate = [dateFormatter dateFromString:@"01/01/2000"];
+    params.finalDate= [NSDate date];
+    
+    [JTProgressHUD show];
+    [self.request listCauses:params withBlock:^(BOOL success, NSArray *causes, NSError *error) {
+        if (success) {
+            if(causes){
+                self.causesList= causes;
+                [self.tableView reloadData];
+            }
+        }else{
+            UIAlertController *alert= [UIAlertController alertControllerWithTitle:@"Ocorreu algo estranho :-(" message:@"Não foi possível carregar as informações das não compras. Verifique sua internet e tente novamente." preferredStyle:UIAlertControllerStyleAlert ];
+            UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Tentar novamente" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alert addAction:okButton];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        [JTProgressHUD hide];
+    }];
+    
+}
+
+@end
