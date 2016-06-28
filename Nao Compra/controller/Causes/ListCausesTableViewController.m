@@ -83,7 +83,7 @@
         cell.ageGroup.text= @"Acima de 60 anos";
     }
     
-    cell.date.text= response.cause.created_at;
+    cell.date.text= response.cause.visited_at;
     
     return cell;
 }
