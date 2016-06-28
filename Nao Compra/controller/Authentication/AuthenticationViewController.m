@@ -53,7 +53,8 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }else{
-    
+        [self.emailTextfield resignFirstResponder];
+        [self.passwordTextfield resignFirstResponder];
         Signin *signin= [Signin new];
         signin.email= self.emailTextfield.text.lowercaseString;
         signin.password= self.passwordTextfield.text.lowercaseString;
