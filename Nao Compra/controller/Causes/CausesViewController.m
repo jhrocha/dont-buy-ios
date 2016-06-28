@@ -16,8 +16,6 @@
     self.cause= [Cause new];
     self.request= [CausesRequests new];
     self.customer= [Customer new];
-    self.sendButton.layer.borderWidth= 0.4f;
-    self.sendButton.layer.borderColor= [UIColor blueColor].CGColor;
     
 }
 
@@ -142,34 +140,49 @@
 
     UIAlertController *alertAnswer= [UIAlertController alertControllerWithTitle:@"Motivo" message:@"Selecione qual o motivo que mais se adequa a não compra do cliente" preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIAlertAction *answer1= [UIAlertAction actionWithTitle:@"Resposta 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 1";
-        [self.answerButton setTitle:@"Resposta 1" forState:UIControlStateNormal];
+    UIAlertAction *answer1= [UIAlertAction actionWithTitle:@"Preço Alto" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Preço Alto";
+        [self.answerButton setTitle:@"Preço Alto" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer2= [UIAlertAction actionWithTitle:@"Resposta 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 2";
-        [self.answerButton setTitle:@"Resposta 2" forState:UIControlStateNormal];
+    UIAlertAction *answer2= [UIAlertAction actionWithTitle:@"Estava pesquisando preço" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Estava pesquisando preço";
+        [self.answerButton setTitle:@"Estava pesquisando preço" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer3= [UIAlertAction actionWithTitle:@"Resposta 3" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 3";
-        [self.answerButton setTitle:@"Resposta 3" forState:UIControlStateNormal];
+    UIAlertAction *answer3= [UIAlertAction actionWithTitle:@"Mau atendimento" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Mau atendimento";
+        [self.answerButton setTitle:@"Mau atendimento" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer4= [UIAlertAction actionWithTitle:@"Resposta 4" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 4";
-        [self.answerButton setTitle:@"Resposta 4" forState:UIControlStateNormal];
+    UIAlertAction *answer4= [UIAlertAction actionWithTitle:@"Acompanhante atrapalhou venda" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Acompanhante atrapalhou venda";
+        [self.answerButton setTitle:@"Acompanhante atrapalhou venda" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer5= [UIAlertAction actionWithTitle:@"Resposta 5" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 5";
-        [self.answerButton setTitle:@"Resposta 5" forState:UIControlStateNormal];
+    UIAlertAction *answer5= [UIAlertAction actionWithTitle:@"Esperar melhor dia de compra do cartão" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Esperar melhor dia de compra do cartão";
+        [self.answerButton setTitle:@"Esperar melhor dia de compra do cartão" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer6= [UIAlertAction actionWithTitle:@"Resposta 6" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 6";
-        [self.answerButton setTitle:@"Resposta 6" forState:UIControlStateNormal];
+    UIAlertAction *answer6= [UIAlertAction actionWithTitle:@"Viu oferta melhor em loja virtual" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Viu oferta melhor em loja virtual";
+        [self.answerButton setTitle:@"Viu oferta melhor em loja virtual" forState:UIControlStateNormal];
+    }];
+
+    UIAlertAction *answer7= [UIAlertAction actionWithTitle:@"Visitou apenas por curiosidade" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Visitou apenas por curiosidade";
+        [self.answerButton setTitle:@"Visitou apenas por curiosidade" forState:UIControlStateNormal];
+    }];
+    
+    UIAlertAction *answer8= [UIAlertAction actionWithTitle:@"Prazo de entrega longo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Prazo de entrega longo";
+        [self.answerButton setTitle:@"Prazo de entrega longo" forState:UIControlStateNormal];
+    }];
+
+    UIAlertAction *answer9= [UIAlertAction actionWithTitle:@"Não gostou da marca" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Não gostou da marca";
+        [self.answerButton setTitle:@"Não gostou da marca" forState:UIControlStateNormal];
     }];
     
     [alertAnswer addAction:answer1];
@@ -178,6 +191,9 @@
     [alertAnswer addAction:answer4];
     [alertAnswer addAction:answer5];
     [alertAnswer addAction:answer6];
+    [alertAnswer addAction:answer7];
+    [alertAnswer addAction:answer8];
+    [alertAnswer addAction:answer9];
     
     [self presentViewController:alertAnswer animated:YES completion:nil];
     
