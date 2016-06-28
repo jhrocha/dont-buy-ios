@@ -99,7 +99,10 @@
     [alertController.view addSubview:picker];
     [alertController addAction:({
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self.questionButton setTitle: [NSString stringWithFormat:@"%@",picker.date] forState:UIControlStateNormal];
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"dd-MM-yy"];
+            NSString *date = [dateFormat stringFromDate:picker.date];
+            [self.questionButton setTitle:date forState:UIControlStateNormal];
             self.cause.visited_at= [NSString stringWithFormat:@"%@",picker.date];
         }];
         action;
@@ -221,7 +224,7 @@
 - (void) resetField{
     [self.genderButton setTitle:@"Escolher genêro" forState:UIControlStateNormal];
     [self.ageGroupButton setTitle:@"Escolher F. etária" forState:UIControlStateNormal];
-    [self.questionButton setTitle:@"Escolher pergunta" forState:UIControlStateNormal];
+    [self.questionButton setTitle:@"Escolher data" forState:UIControlStateNormal];
     [self.answerButton setTitle:@"Escolher o motivo" forState:UIControlStateNormal];
 }
 @end
