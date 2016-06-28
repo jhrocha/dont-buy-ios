@@ -108,7 +108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1w-7a-f4B">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data da visita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1w-7a-f4B">
                                                     <rect key="frame" x="46" y="13" width="110" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="fFt-uH-Hi4"/>
@@ -120,7 +120,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-na-pVG">
                                                     <rect key="frame" x="158" y="10" width="154" height="30"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                    <state key="normal" title="Escolher pergunta">
+                                                    <state key="normal" title="Escolher data">
                                                         <color key="titleColor" red="0.92156862750000001" green="0.30842180139999997" blue="0.49696259729999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
