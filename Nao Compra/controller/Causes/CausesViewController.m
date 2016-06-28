@@ -16,8 +16,6 @@
     self.cause= [Cause new];
     self.request= [CausesRequests new];
     self.customer= [Customer new];
-    self.sendButton.layer.borderWidth= 0.4f;
-    self.sendButton.layer.borderColor= [UIColor blueColor].CGColor;
     
 }
 
@@ -95,46 +93,21 @@
 
 - (IBAction)chooseQuestion:(id)sender {
 
-    UIAlertController *alertQuestion= [UIAlertController alertControllerWithTitle:@"Pergunta" message:@"Quais das perguntas foram realizadas ao cliente?" preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    UIAlertAction *question1= [UIAlertAction actionWithTitle:@"Pergunta 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 1";
-        [self.questionButton setTitle:@"Pergunta 1" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question2= [UIAlertAction actionWithTitle:@"Pergunta 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 2";
-        [self.questionButton setTitle:@"Pergunta 2" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question3= [UIAlertAction actionWithTitle:@"Pergunta 3" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 3";
-        [self.questionButton setTitle:@"Pergunta 3" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question4= [UIAlertAction actionWithTitle:@"Pergunta 4" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 4";
-        [self.questionButton setTitle:@"Pergunta 4" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question5= [UIAlertAction actionWithTitle:@"Pergunta 5" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 5";
-        [self.questionButton setTitle:@"Pergunta 5" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question6= [UIAlertAction actionWithTitle:@"Pergunta 6" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 6";
-        [self.questionButton setTitle:@"Pergunta 6" forState:UIControlStateNormal];
-    }];
-    
-    [alertQuestion addAction:question1];
-    [alertQuestion addAction:question2];
-    [alertQuestion addAction:question3];
-    [alertQuestion addAction:question4];
-    [alertQuestion addAction:question5];
-    [alertQuestion addAction:question6];
-    
-    [self presentViewController:alertQuestion animated:YES completion:nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n\n\n" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIDatePicker *picker = [[UIDatePicker alloc] init];
+    [picker setDatePickerMode:UIDatePickerModeDate];
+    [alertController.view addSubview:picker];
+    [alertController addAction:({
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.questionButton setTitle: [NSString stringWithFormat:@"%@",picker.date] forState:UIControlStateNormal];
+            self.cause.visited_at= [NSString stringWithFormat:@"%@",picker.date];
+        }];
+        action;
+    })];
+    UIPopoverPresentationController *popoverController = alertController.popoverPresentationController;
+    popoverController.sourceView = sender;
+    popoverController.sourceRect = [sender bounds];
+    [self presentViewController:alertController  animated:YES completion:nil];
     
 }
 
@@ -142,34 +115,49 @@
 
     UIAlertController *alertAnswer= [UIAlertController alertControllerWithTitle:@"Motivo" message:@"Selecione qual o motivo que mais se adequa a não compra do cliente" preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIAlertAction *answer1= [UIAlertAction actionWithTitle:@"Resposta 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 1";
-        [self.answerButton setTitle:@"Resposta 1" forState:UIControlStateNormal];
+    UIAlertAction *answer1= [UIAlertAction actionWithTitle:@"Preço Alto" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Preço Alto";
+        [self.answerButton setTitle:@"Preço Alto" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer2= [UIAlertAction actionWithTitle:@"Resposta 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 2";
-        [self.answerButton setTitle:@"Resposta 2" forState:UIControlStateNormal];
+    UIAlertAction *answer2= [UIAlertAction actionWithTitle:@"Estava pesquisando preço" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Estava pesquisando preço";
+        [self.answerButton setTitle:@"Estava pesquisando preço" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer3= [UIAlertAction actionWithTitle:@"Resposta 3" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 3";
-        [self.answerButton setTitle:@"Resposta 3" forState:UIControlStateNormal];
+    UIAlertAction *answer3= [UIAlertAction actionWithTitle:@"Mau atendimento" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Mau atendimento";
+        [self.answerButton setTitle:@"Mau atendimento" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer4= [UIAlertAction actionWithTitle:@"Resposta 4" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 4";
-        [self.answerButton setTitle:@"Resposta 4" forState:UIControlStateNormal];
+    UIAlertAction *answer4= [UIAlertAction actionWithTitle:@"Acompanhante atrapalhou venda" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Acompanhante atrapalhou venda";
+        [self.answerButton setTitle:@"Acompanhante atrapalhou venda" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer5= [UIAlertAction actionWithTitle:@"Resposta 5" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 5";
-        [self.answerButton setTitle:@"Resposta 5" forState:UIControlStateNormal];
+    UIAlertAction *answer5= [UIAlertAction actionWithTitle:@"Esperar melhor dia de compra do cartão" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Esperar melhor dia de compra do cartão";
+        [self.answerButton setTitle:@"Esperar melhor dia de compra do cartão" forState:UIControlStateNormal];
     }];
     
-    UIAlertAction *answer6= [UIAlertAction actionWithTitle:@"Resposta 6" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.answer= @"Resposta 6";
-        [self.answerButton setTitle:@"Resposta 6" forState:UIControlStateNormal];
+    UIAlertAction *answer6= [UIAlertAction actionWithTitle:@"Viu oferta melhor em loja virtual" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Viu oferta melhor em loja virtual";
+        [self.answerButton setTitle:@"Viu oferta melhor em loja virtual" forState:UIControlStateNormal];
+    }];
+
+    UIAlertAction *answer7= [UIAlertAction actionWithTitle:@"Visitou apenas por curiosidade" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Visitou apenas por curiosidade";
+        [self.answerButton setTitle:@"Visitou apenas por curiosidade" forState:UIControlStateNormal];
+    }];
+    
+    UIAlertAction *answer8= [UIAlertAction actionWithTitle:@"Prazo de entrega longo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Prazo de entrega longo";
+        [self.answerButton setTitle:@"Prazo de entrega longo" forState:UIControlStateNormal];
+    }];
+
+    UIAlertAction *answer9= [UIAlertAction actionWithTitle:@"Não gostou da marca" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.cause.answer= @"Não gostou da marca";
+        [self.answerButton setTitle:@"Não gostou da marca" forState:UIControlStateNormal];
     }];
     
     [alertAnswer addAction:answer1];
@@ -178,6 +166,9 @@
     [alertAnswer addAction:answer4];
     [alertAnswer addAction:answer5];
     [alertAnswer addAction:answer6];
+    [alertAnswer addAction:answer7];
+    [alertAnswer addAction:answer8];
+    [alertAnswer addAction:answer9];
     
     [self presentViewController:alertAnswer animated:YES completion:nil];
     
@@ -186,7 +177,7 @@
 - (IBAction)sendData:(id)sender {
     self.cause.customer= self.customer;
     
-    if (self.customer.gender == nil || self.customer.initial_age == nil || self.customer.final_age == nil || self.cause.question  == nil || self.cause.answer == nil
+    if (self.customer.gender == nil || self.customer.initial_age == nil || self.customer.final_age == nil || self.cause.visited_at  == nil || self.cause.answer == nil
         ) {
         UIAlertController *alert= [UIAlertController alertControllerWithTitle:@"Não consegui confirmar :(" message:@"Por favor, para prosseguir é necessário preencher todas as informações sobre o cliente e não compra" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Ok, vou preencher" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

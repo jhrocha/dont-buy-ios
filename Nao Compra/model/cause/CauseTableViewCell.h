@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *question;
 @property (strong, nonatomic) IBOutlet UILabel *answer;
 @property (strong, nonatomic) IBOutlet UIView *ageGroupColor;
+@property (strong, nonatomic) IBOutlet UILabel *ageGroup;
+@property (strong, nonatomic) IBOutlet UILabel *gender;
 
 
 @end
