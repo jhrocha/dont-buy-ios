@@ -93,46 +93,21 @@
 
 - (IBAction)chooseQuestion:(id)sender {
 
-    UIAlertController *alertQuestion= [UIAlertController alertControllerWithTitle:@"Pergunta" message:@"Quais das perguntas foram realizadas ao cliente?" preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    UIAlertAction *question1= [UIAlertAction actionWithTitle:@"Pergunta 1" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 1";
-        [self.questionButton setTitle:@"Pergunta 1" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question2= [UIAlertAction actionWithTitle:@"Pergunta 2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 2";
-        [self.questionButton setTitle:@"Pergunta 2" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question3= [UIAlertAction actionWithTitle:@"Pergunta 3" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 3";
-        [self.questionButton setTitle:@"Pergunta 3" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question4= [UIAlertAction actionWithTitle:@"Pergunta 4" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 4";
-        [self.questionButton setTitle:@"Pergunta 4" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question5= [UIAlertAction actionWithTitle:@"Pergunta 5" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 5";
-        [self.questionButton setTitle:@"Pergunta 5" forState:UIControlStateNormal];
-    }];
-    
-    UIAlertAction *question6= [UIAlertAction actionWithTitle:@"Pergunta 6" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        self.cause.question= @"Pergunta 6";
-        [self.questionButton setTitle:@"Pergunta 6" forState:UIControlStateNormal];
-    }];
-    
-    [alertQuestion addAction:question1];
-    [alertQuestion addAction:question2];
-    [alertQuestion addAction:question3];
-    [alertQuestion addAction:question4];
-    [alertQuestion addAction:question5];
-    [alertQuestion addAction:question6];
-    
-    [self presentViewController:alertQuestion animated:YES completion:nil];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n\n\n" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIDatePicker *picker = [[UIDatePicker alloc] init];
+    [picker setDatePickerMode:UIDatePickerModeDate];
+    [alertController.view addSubview:picker];
+    [alertController addAction:({
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.questionButton setTitle: [NSString stringWithFormat:@"%@",picker.date] forState:UIControlStateNormal];
+            self.cause.visited_at= [NSString stringWithFormat:@"%@",picker.date];
+        }];
+        action;
+    })];
+    UIPopoverPresentationController *popoverController = alertController.popoverPresentationController;
+    popoverController.sourceView = sender;
+    popoverController.sourceRect = [sender bounds];
+    [self presentViewController:alertController  animated:YES completion:nil];
     
 }
 
@@ -202,7 +177,7 @@
 - (IBAction)sendData:(id)sender {
     self.cause.customer= self.customer;
     
-    if (self.customer.gender == nil || self.customer.initial_age == nil || self.customer.final_age == nil || self.cause.question  == nil || self.cause.answer == nil
+    if (self.customer.gender == nil || self.customer.initial_age == nil || self.customer.final_age == nil || self.cause.visited_at  == nil || self.cause.answer == nil
         ) {
         UIAlertController *alert= [UIAlertController alertControllerWithTitle:@"Não consegui confirmar :(" message:@"Por favor, para prosseguir é necessário preencher todas as informações sobre o cliente e não compra" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okButton= [UIAlertAction actionWithTitle:@"Ok, vou preencher" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
