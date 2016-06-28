@@ -49,33 +49,38 @@
     
     CauseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cause" forIndexPath:indexPath];
     cell.question.text=response.cause.question;
-    cell.question.text=response.cause.answer;
+    cell.answer.text=response.cause.answer;
     Customer *customer= response.customer;
     
     if (customer.initial_age.intValue <18 && customer.final_age.intValue >= 18 ) {
         
         cell.ageGroupColor.backgroundColor= [UIColor lightGrayColor];
+        cell.ageGroup.text= @"Entre 10 e 18 anos";
         
     }else if (customer.initial_age.intValue >=18 && customer.final_age.intValue <= 25 ){
         
         cell.ageGroupColor.backgroundColor= [UIColor greenColor];
+        cell.ageGroup.text= @"Entre 18 e 25 anos";
         
     }else if (customer.initial_age.intValue >=25 && customer.final_age.intValue <= 35 ){
         
         cell.ageGroupColor.backgroundColor= [UIColor orangeColor];
+        cell.ageGroup.text= @"Entre 25 e 35 anos";
         
     }else if (customer.initial_age.intValue >=35 && customer.final_age.intValue <= 45 ){
         
         cell.ageGroupColor.backgroundColor= [UIColor redColor];
+        cell.ageGroup.text= @"Entre 35 e 45 anos";
         
     }else if (customer.initial_age.intValue >=45 && customer.final_age.intValue <= 60 ){
         
         cell.ageGroupColor.backgroundColor= [UIColor grayColor];
-    
+        cell.ageGroup.text= @"Entre 45 e 60 anos";
+        
     }else if (customer.final_age.intValue >= 60 ){
     
         cell.ageGroupColor.backgroundColor= [UIColor blackColor];
-        
+        cell.ageGroup.text= @"Acima de 60 anos";
     }
     
     cell.date.text= response.cause.created_at;
