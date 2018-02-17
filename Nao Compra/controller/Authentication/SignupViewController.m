@@ -39,6 +39,10 @@
 
 - (IBAction)signup:(id)sender {
     
+    [self.emailTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.cpfTextField resignFirstResponder];
+    
     if ([self.emailTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""] || [self.cpfTextField.text isEqualToString:@""]) {
         
         UIAlertController  *alert= [UIAlertController alertControllerWithTitle:@"Não é possível continuar :(" message:@"Preencha todos os campos para continuar" preferredStyle:UIAlertControllerStyleAlert];
